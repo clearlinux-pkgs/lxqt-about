@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x42C9C8D3AF5EA5E3 (agaida@siduction.org)
 #
 Name     : lxqt-about
-Version  : 0.14.0
-Release  : 1
-URL      : https://downloads.lxqt.org/downloads/lxqt-about/0.14.0/lxqt-about-0.14.0.tar.xz
-Source0  : https://downloads.lxqt.org/downloads/lxqt-about/0.14.0/lxqt-about-0.14.0.tar.xz
-Source99 : https://downloads.lxqt.org/downloads/lxqt-about/0.14.0/lxqt-about-0.14.0.tar.xz.asc
+Version  : 0.14.1
+Release  : 2
+URL      : https://downloads.lxqt.org/downloads/lxqt-about/0.14.1/lxqt-about-0.14.1.tar.xz
+Source0  : https://downloads.lxqt.org/downloads/lxqt-about/0.14.1/lxqt-about-0.14.1.tar.xz
+Source99 : https://downloads.lxqt.org/downloads/lxqt-about/0.14.1/lxqt-about-0.14.1.tar.xz.asc
 Summary  : LXQt about dialog.
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -54,14 +54,14 @@ license components for the lxqt-about package.
 
 
 %prep
-%setup -q -n lxqt-about-0.14.0
+%setup -q -n lxqt-about-0.14.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549313579
+export SOURCE_DATE_EPOCH=1551230022
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -69,7 +69,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1549313579
+export SOURCE_DATE_EPOCH=1551230022
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-about
 cp COPYING %{buildroot}/usr/share/package-licenses/lxqt-about/COPYING
@@ -94,6 +94,7 @@ popd
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_da.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_de.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_el.qm
+/usr/share/lxqt/translations/lxqt-about/lxqt-about_en_GB.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_eo.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_es.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_es_VE.qm
