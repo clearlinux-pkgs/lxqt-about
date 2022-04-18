@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-about
-Version  : 1.0.0
-Release  : 10
-URL      : https://github.com/lxqt/lxqt-about/releases/download/1.0.0/lxqt-about-1.0.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-about/releases/download/1.0.0/lxqt-about-1.0.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-about/releases/download/1.0.0/lxqt-about-1.0.0.tar.xz.asc
+Version  : 1.1.0
+Release  : 11
+URL      : https://github.com/lxqt/lxqt-about/releases/download/1.1.0/lxqt-about-1.1.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-about/releases/download/1.1.0/lxqt-about-1.1.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-about/releases/download/1.1.0/lxqt-about-1.1.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -54,15 +54,15 @@ license components for the lxqt-about package.
 
 
 %prep
-%setup -q -n lxqt-about-1.0.0
-cd %{_builddir}/lxqt-about-1.0.0
+%setup -q -n lxqt-about-1.1.0
+cd %{_builddir}/lxqt-about-1.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636133213
+export SOURCE_DATE_EPOCH=1650325256
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -75,10 +75,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1636133213
+export SOURCE_DATE_EPOCH=1650325256
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-about
-cp %{_builddir}/lxqt-about-1.0.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-about/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-about-1.1.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-about/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -93,6 +93,7 @@ popd
 %files data
 %defattr(-,root,root,-)
 /usr/share/applications/lxqt-about.desktop
+/usr/share/icons/hicolor/scalable/apps/lxqt-about.svg
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_ar.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_arn.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_ast.qm
@@ -114,6 +115,7 @@ popd
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_fr.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_gl.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_he.qm
+/usr/share/lxqt/translations/lxqt-about/lxqt-about_hi.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_hr.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_hu.qm
 /usr/share/lxqt/translations/lxqt-about/lxqt-about_ia.qm
